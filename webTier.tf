@@ -167,7 +167,7 @@ module "webtier_lt" {
   name_prefix            = "tf-webserver-"
   image_id               = "ami-093613b5938a7e47c"
   instance_type          = "t2.micro"
-  key_name               = "tf-keypair"
+  key_name               = var.key_name != "" ? var.key_name : null
   user_data              = filebase64("${path.module}/web.sh")
   vpc_security_group_ids = [module.sg_web_server.sg_id]
   tags_lt = {
@@ -175,6 +175,8 @@ module "webtier_lt" {
     Kind = "practice"
   }
 }
+
+
 
 # output "webtier_lt-id" {
 #   value = module.webtier_lt.lt_id

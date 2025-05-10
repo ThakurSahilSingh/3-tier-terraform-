@@ -165,7 +165,7 @@ module "apptier_lt" {
   name_prefix            = "tf-appserver-"
   image_id               = "ami-093613b5938a7e47c"
   instance_type          = "t2.micro"
-  key_name               = "tf-keypair"
+  key_name               = var.key_name != "" ? var.key_name : null
   user_data              = filebase64("${path.module}/app.sh")
   vpc_security_group_ids = [module.sg_app_server.sg_id]
   tags_lt = {

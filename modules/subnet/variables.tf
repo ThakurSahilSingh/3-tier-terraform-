@@ -17,3 +17,5 @@ variable "tags_subnet" {
 variable "public" {
   type = bool
 }
+
+ 

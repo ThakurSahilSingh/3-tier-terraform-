@@ -239,3 +239,9 @@ variable "rds_subnet_1b_cidr" {
   description = "CIDR block for private RDS subnet in AZ 1b"
   type        = string
 }
+variable "key_name" {
+  description = "Key pair for EC2 instances"
+  type        = string
+  default     = ""
+}
+
