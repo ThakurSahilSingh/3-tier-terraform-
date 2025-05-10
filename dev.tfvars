@@ -18,6 +18,10 @@ tags_subnet_1 = {
   Kind = "practice"
 }
 
+rds_subnet_1a_cidr = "10.0.5.0/24"
+rds_subnet_1b_cidr = "10.0.6.0/24"
+
+
 #######################
 # subnet-2-public-ap-south-1b
 cidr_subnet_2 = "10.0.2.0/24"

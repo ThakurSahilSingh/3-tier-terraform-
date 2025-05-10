@@ -229,3 +229,13 @@ variable "tags_app_tg" {
 variable "tags_web_tg" {
   type = map(any)
 }
+
+variable "rds_subnet_1a_cidr" {
+  description = "CIDR block for private RDS subnet in AZ 1a"
+  type        = string
+}
+
+variable "rds_subnet_1b_cidr" {
+  description = "CIDR block for private RDS subnet in AZ 1b"
+  type        = string
+}

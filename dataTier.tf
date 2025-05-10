@@ -1,16 +1,17 @@
 module "subnet-rds-priv-1a" {
   source      = "./modules/subnet"
   vpc_id      = module.my_vpc.my_vpc_id
-  cidr_subnet = "172.16.5.0/24"
+  cidr_subnet = var.rds_subnet_1a_cidr
   az_subnet   = "ap-south-1a"
   public      = false
   tags_subnet = {
-  Name = "tf-priv-rds-ap-south-1a",
-  Kind = "practice"
+    Name = "tf-priv-rds-ap-south-1a",
+    Kind = "practice"
+  }
 }
 
 
-}
+
 
 # output "subnet-rds-priv-1a-id" {
 #   value = module.subnet-rds-priv-1a.subnet_id
@@ -19,15 +20,13 @@ module "subnet-rds-priv-1a" {
 module "subnet-rds-priv-1b" {
   source      = "./modules/subnet"
   vpc_id      = module.my_vpc.my_vpc_id
-  cidr_subnet = "172.16.6.0/24"
+  cidr_subnet = var.rds_subnet_1b_cidr
   az_subnet   = "ap-south-1b"
   public      = false
   tags_subnet = {
-  Name = "tf-priv-rds-ap-south-1b",
-  Kind = "practice"
-}
-
-
+    Name = "tf-priv-rds-ap-south-1b",
+    Kind = "practice"
+  }
 }
 
 # output "subnet-rds-priv-1b-id" {
