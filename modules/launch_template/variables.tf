@@ -10,9 +10,11 @@
     type = string
  }
 
- variable key_name{
-    type = string
- }
+ variable "key_name" {
+  description = "Key pair for EC2 instances"
+  type        = string
+  default     = ""
+}
 
  variable user_data{
     type = string
